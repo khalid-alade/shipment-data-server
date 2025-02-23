@@ -42,5 +42,4 @@ app.get("/api/shipments/:id", (req, res) => {
     res.status(404).json({ message: "Shipment not found" });
   }
 });
-
 module.exports = app;
