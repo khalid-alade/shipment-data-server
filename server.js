@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const PORT = 4000;
 
 // Mock shipment data
 const shipments = [
@@ -30,12 +29,11 @@ const shipments = [
   },
 ];
 
-// Route to get all shipments
+// Routes
 app.get("/api/shipments", (req, res) => {
   res.json(shipments);
 });
 
-// Route to get a single shipment by ID
 app.get("/api/shipments/:id", (req, res) => {
   const shipmentId = parseInt(req.params.id);
   const shipment = shipments.find((s) => s.id === shipmentId);
@@ -47,8 +45,5 @@ app.get("/api/shipments/:id", (req, res) => {
   }
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// Export the Express app as a serverless function
 module.exports = app;
