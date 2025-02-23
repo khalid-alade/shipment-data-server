@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 
-// Mock shipment data
 const shipments = [
   {
     id: 1,
@@ -29,7 +28,6 @@ const shipments = [
   },
 ];
 
-// Routes
 app.get("/api/shipments", (req, res) => {
   res.json(shipments);
 });
@@ -45,5 +43,4 @@ app.get("/api/shipments/:id", (req, res) => {
   }
 });
 
-// Export the Express app as a serverless function
 module.exports = app;
