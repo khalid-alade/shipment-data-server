@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 3000;
+const PORT = 4000;
 
 // Mock shipment data
 const shipments = [
@@ -51,3 +51,4 @@ app.get("/api/shipments/:id", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+module.exports = app;
