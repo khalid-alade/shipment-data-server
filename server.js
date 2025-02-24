@@ -264,7 +264,8 @@ wss.on("connection", (ws) => {
 
   // Simulate real-time status updates
   const interval = setInterval(() => {
-    const randomShipment = shipments[Math.floor(Math.random() * shipments.length)];
+    // const randomShipment = shipments[Math.floor(Math.random() * shipments.length)];
+    const randomShipment = shipments[0];
     const newStatus = ["In Transit", "Delivered", "Pending"][Math.floor(Math.random() * 3)];
 
     // Update the shipment status
