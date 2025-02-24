@@ -16,7 +16,7 @@ const shipments = [
   {
       "id": 1,
       "date": "Feb 20, 2025",
-      "vehicle": "IBA-234-DG",
+      "vehicle": "JCB-234-DG",
       "origin": "Ibadan",
       "destination": "Kano",
       "status": "In Transit"
